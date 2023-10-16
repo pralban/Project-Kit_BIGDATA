@@ -1,4 +1,7 @@
 from tasklist import TaskList
+import os
+from task import Task
+
 
 def display_menu():
     print("\nMenu :")
@@ -9,8 +12,30 @@ def display_menu():
     print("5. Afficher la liste des tâches archivées")
     print("6. Quitter")
 
+
 def main():
     task_list = TaskList()
+    file_path = "todo_list.txt"
+    # si le fichier exist, enregistre le liste dans le fichier
+    if os.path.exists(file_path):
+        with open(file_path, "r") as file:
+            todo_list = file.read().splitlines()
+            for line in todo_list:
+                data = line.split(',')
+                if len(data) >= 2:
+                    name = data[0]
+                    description = data[1]
+                    is_completed = data[2] == "True"
+                    task = Task(name, description)
+                    if is_completed:
+                        task.mark_completed()
+                        task_list.archived_tasks.append(task)
+                    else:
+                        task_list.tasks.append(task)
+                else:
+                    continue
+        with open(file_path, "w") as file:
+            file.truncate(0)
 
     while True:
         display_menu()
@@ -36,9 +61,11 @@ def main():
             print("Liste des tâches archivées :")
             task_list.display_archived_tasks()
         elif choice == "6":
+            task_list.save_list(file_path)
             break
         else:
             print("Choix non valide. Veuillez entrer un numéro valide.")
+
 
 if __name__ == "__main__":
     main()

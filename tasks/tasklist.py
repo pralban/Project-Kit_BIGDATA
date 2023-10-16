@@ -1,5 +1,6 @@
 from task import Task
 
+
 class TaskList:
     def __init__(self):
         self.tasks = []
@@ -38,3 +39,16 @@ class TaskList:
         else:
             for task in self.archived_tasks:
                 print(task)
+
+    def save_list(self, file_path):
+        with open(file_path, "a") as file:
+            file.write("### Tasks ###\n")
+            for task in self.tasks:
+                # 写入任务信息
+                file.write(
+                    f"{task.name},{task.description},{task.completed}\n")
+            file.write("### Achived Tasks ###\n")
+            for archived_task in self.archived_tasks:
+                # 写入已完成任务信息
+                file.write(
+                    f"{archived_task.name},{archived_task.description},{archived_task.completed}\n")
