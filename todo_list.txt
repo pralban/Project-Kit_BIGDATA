@@ -1,8 +1,4 @@
 ### Tasks ###
-a,aa,False
-s,ss,False
+The name of the task:ss, The description of the task:111, The state of the task:False
 ### Achived Tasks ###
-x,xx,True
-x,xx,True
-a,aa,True
-d,dd,True
+The name of the task:s, The description of the task:ss, The state of the task:True

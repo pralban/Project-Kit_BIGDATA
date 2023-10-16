@@ -16,16 +16,21 @@ def display_menu():
 def main():
     task_list = TaskList()
     file_path = "todo_list.txt"
-    # si le fichier exist, enregistre le liste dans le fichier
+    # si le fichier exist, enregistre la liste dans le fichier
     if os.path.exists(file_path):
         with open(file_path, "r") as file:
             todo_list = file.read().splitlines()
             for line in todo_list:
                 data = line.split(',')
                 if len(data) >= 2:
-                    name = data[0]
-                    description = data[1]
-                    is_completed = data[2] == "True"
+                    parts = line.split(",")
+                    for part in parts:
+                        if "The name of the task:" in part:
+                            name = part.split(":")[1].strip()
+                        elif "The description of the task:" in part:
+                            description = part.split(":")[1].strip()
+                        elif "The state of the task:" in part:
+                            is_completed = part.split(":")[1].strip() == "True"
                     task = Task(name, description)
                     if is_completed:
                         task.mark_completed()
@@ -34,6 +39,7 @@ def main():
                         task_list.tasks.append(task)
                 else:
                     continue
+        # vide le fichier pour ne répéter pas les listes
         with open(file_path, "w") as file:
             file.truncate(0)
 
