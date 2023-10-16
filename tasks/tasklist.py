@@ -44,11 +44,11 @@ class TaskList:
         with open(file_path, "a") as file:
             file.write("### Tasks ###\n")
             for task in self.tasks:
-                # 写入任务信息
+                # Ecrire les informations des tasks
                 file.write(
                     f"The name of the task:{task.name}, The description of the task:{task.description}, The state of the task:{task.completed}\n")
             file.write("### Achived Tasks ###\n")
             for archived_task in self.archived_tasks:
-                # 写入已完成任务信息
+                # Ecrire les informations des tasks finits
                 file.write(
                     f"The name of the task:{archived_task.name}, The description of the task:{archived_task.description}, The state of the task:{archived_task.completed}\n")
