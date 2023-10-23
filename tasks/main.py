@@ -8,6 +8,7 @@ The main function initializes the task list, displays a menu for user interactio
 
 from .tasklist import TaskList
 from logs import configure_logging
+
 import logging
 
 configure_logging()
@@ -17,12 +18,13 @@ def display_menu():
     Display the main menu options for the task management application.
     """
     print("\nMenu :")
-    print("1. Add a task")
-    print("2. Remove a task")
-    print("3. Mark a task as completed")
-    print("4. Display the list of active tasks")
-    print("5. Display the list of archived tasks")
-    print("6. Quit")
+    print("1. Ajouter une tâche")
+    print("2. Supprimer une tâche")
+    print("3. Marquer une tâche comme terminée")
+    print("4. Afficher la liste des tâches en cours")
+    print("5. Afficher la liste des tâches archivées")
+    print("6. Quitter")
+
 
 def main():
     """
@@ -59,9 +61,12 @@ def main():
             print("List of archived tasks:")
             task_list.display_archived_tasks()
         elif choice == "6":
+            use_gui_cli(task_list)  # Appeler la fonction pour lancer l'interface graphique
+        elif choice == "7":
             break
         else:
-            print("Invalid choice. Please enter a valid number.")
+            print("Choix non valide. Veuillez entrer un numéro valide.")
+
 
 if __name__ == "__main__":
     main()
