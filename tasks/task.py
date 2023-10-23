@@ -1,3 +1,28 @@
+"""
+Task Class - task.py
+
+This module defines the `Task` class, representing a task in the to-do list application.
+
+The `Task` class includes the following attributes and methods:
+- Attributes:
+  - id (int): A unique identifier for the task.
+  - name (str): The name of the task.
+  - description (str): A description of the task.
+  - completed (bool): A flag indicating whether the task is completed.
+  - created_date (datetime): The date and time when the task was created.
+
+- Methods:
+  - __init__(self, name, description): Initializes a Task object with the provided name and description. The task is created with a unique ID, and completion status is set to False.
+  - mark_completed(self): Marks the task as completed by setting the completion status to True.
+  - __str__(self) -> str: Returns a formatted string representation of the task, including its ID, name, description, completion status, and creation date.
+
+Exceptions:
+- ValueError: If the name or description is not provided during task initialization.
+
+This class is used to represent individual tasks within the to-do list application, allowing users to create, manage, and mark tasks as completed. Each task has a unique identifier (ID) and associated information such as name, description, completion status, and creation date.
+"""
+
+
 from datetime import datetime
 import logging
 

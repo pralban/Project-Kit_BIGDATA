@@ -1,3 +1,29 @@
+"""
+Test Suite for Task Management Application
+
+This test suite contains test cases for the Task Management Application, covering various aspects of the application.
+
+Test Cases:
+    - test_create_task_with_name_and_description(): Test creating a task with a name and description.
+    - test_mark_task_as_completed(): Test marking a task as completed.
+    - test_print_task_string_representation(): Test the string representation of a task.
+    - test_unique_task_ids(): Test creating multiple tasks with unique IDs.
+    - test_create_task_with_empty_name_or_description(): Test creating a task with an empty name or description.
+    - test_mark_task_as completed_multiple_times(): Test marking a task as completed multiple times.
+
+Each test case verifies specific functionality or behavior of the application.
+
+Example:
+    test_create_task_with_name_and_description()
+    test_mark_task_as_completed()
+
+    Output:
+    - Verifies that the task is created with the correct name and description.
+    - Verifies that the task is correctly marked as completed.
+
+"""
+
+
 from tasks.task import Task
 
 import pytest

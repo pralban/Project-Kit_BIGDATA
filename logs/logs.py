@@ -1,6 +1,37 @@
+"""
+Logging Configuration Function
+
+This function configures logging for the application by setting up three different loggers:
+- Main logger for INFO level messages.
+- debug_logger for DEBUG level messages.
+- error_logger for ERROR level messages.
+
+Log messages are saved in separate log files in the 'logs' directory.
+
+Functions:
+    - configure_logging(): Configures the logging settings.
+
+Returns:
+    None
+"""
+
+
 import logging
 
 def configure_logging():
+    """
+    Configures logging for the application.
+
+    This function sets up logging with three different loggers:
+    - Main logger for INFO level messages.
+    - debug_logger for DEBUG level messages.
+    - error_logger for ERROR level messages.
+
+    Log messages are saved in separate log files in the 'logs' directory.
+
+    Returns:
+        None
+    """
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s [INFO] %(message)s',

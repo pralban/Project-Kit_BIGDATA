@@ -1,3 +1,23 @@
+"""
+Configuration du Projet - setup.py
+
+Ce fichier de configuration définit les métadonnées et les informations nécessaires à la construction et à l'installation du projet "my_task_manager".
+
+Informations du Projet:
+    - Nom: my_task_manager
+    - Version: 1.0
+    - Description: Un projet de gestion de liste de tâches (To-do List).
+    - Auteurs: Alban Pereira, Yuchen Xia, Aurélien Raulo, Salimatou Traore
+    - Emails des Auteurs: alban.pereira98@gmail.com, xiayuchen35@gmail.com, aurelien0raulo@gmail.com, tra.salimatou@gmail.com
+    - Packages: Recherche de tous les packages nécessaires pour le projet.
+    - Dépendances: datetime, logging
+
+Ce fichier est utilisé pour configurer le projet, y compris le nom, la version, la description, les auteurs, les dépendances et les packages nécessaires pour l'installation. Il permet également de spécifier les informations clés nécessaires à la distribution du projet.
+
+Pour installer le projet, utilisez 'pip install .' dans le répertoire racine du projet.
+"""
+
+
 from setuptools import setup, find_packages
 
 # Les données de projet

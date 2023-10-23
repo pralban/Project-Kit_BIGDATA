@@ -1,3 +1,36 @@
+"""
+Task List Management Module
+
+This module defines a `TaskList` class for managing a list of tasks. The class maintains two lists: `tasks` for active tasks and `archived_tasks` for completed tasks. It provides methods for adding, removing, and archiving tasks, as well as displaying the details of tasks.
+
+Classes:
+    TaskList: Manages a list of tasks and provides task-related operations.
+
+Attributes:
+    - tasks (list): A list of active Task objects.
+    - archived_tasks (list): A list of completed Task objects.
+
+Methods:
+    - add_task(name, description): Add a new task to the list.
+    - remove_task(task_name): Remove a task from the list.
+    - mark_task_completed(task_name): Mark a task as completed and move it to archived tasks.
+    - display_tasks(): Display details of active tasks.
+    - display_archived_tasks(): Display details of completed tasks.
+
+Example:
+    task_list = TaskList()
+    task_list.add_task("Task 1", "Description 1")
+    task_list.display_tasks()
+
+    Output:
+    ID : 0
+    Task : Task 1
+    Description : Description 1
+    Status : Not completed
+    Created Date : <current date and time>
+"""
+
+
 from .task import Task
 import logging
 debug_logger = logging.getLogger("debug_logger")
