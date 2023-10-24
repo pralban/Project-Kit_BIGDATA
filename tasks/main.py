@@ -7,6 +7,7 @@ The main function initializes the task list, displays a menu for user interactio
 
 
 from .tasklist import TaskList
+from .main_gui import use_gui, TaskManagerGUI
 from logs import configure_logging
 
 import logging
