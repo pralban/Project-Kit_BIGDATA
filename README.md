@@ -52,28 +52,6 @@ Pour ouvrir la documentation, exécutez la commande suivante :
 open docs/_build/html/index.html
 ```
 
-## Déploiement Docker
-
-### Étape 1: Configuration du Dockerfile
-
-Le fichier 'Dockerfile' décrit comment l'application doit être construite et exécutée dans un conteneur Docker. Le 'Dockerfile' contient des informations sur l'environnement dans lequel l'application est exécutée, le répertoire de travail dans le conteneur Docker, les dépendances nécessaires et les commandes à exécuter lorsque le conteneur est démarré.
-
-### Étape 2: Construction de l'image Docker
-
-Pour construire l'image Docker, exécutez la commande suivante à partir du répertoire contenant le Dockerfile :
-
-```bash
-docker build -t todolistimage .
-```
-
-### Étape 3: Exécution du Conteneur Docker
-
-Pour exécuter votre application dans un conteneur Docker, utilisez la commande suivante, en remplaçant <host_port> par le port de votre choix :
-
-```bash
-docker run -p <host_port>:<container_port> -d todolistimage
-```
-
 ## Déploiement sur PyPI
 
 ### Étape 1: Mettre à jour la version dans setup.py.
