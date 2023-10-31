@@ -27,11 +27,11 @@ from setuptools import setup, find_packages
 # Les données de projet
 setup(
     name='my_task_manager',
-    version='1.10',
+    version='1.11',
     description='Métadonnées et informations sur la construction de projet To-do List',
     author='Alban Pereira, Yuchen Xia, Aurélien Raulo, Salimatou Traore',
-    author_email='alban.pereira@telecom-paris.fr, yuchen.xia@telecom-paris.fr, \
-                aurelien.raulo@telecom-paris.fr, salimatou.traore@telecom-paris.fr',
+    author_email='alban.pereira@telecom-paris.fr, yuchen.xia@telecom-paris.fr, ' \
+        'aurelien.raulo@telecom-paris.fr, salimatou.traore@telecom-paris.fr',
     packages=find_packages(),
     install_requires=[
         'datetime',
