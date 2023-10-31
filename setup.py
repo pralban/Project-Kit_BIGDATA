@@ -30,8 +30,8 @@ setup(
     version='1.13',
     description='Métadonnées et informations sur la construction de projet To-do List',
     author='Alban Pereira, Yuchen Xia, Aurélien Raulo, Salimatou Traore',
-    author_email='alban.pereira@telecom-paris.fr, yuchen.xia@telecom-paris.fr, ' \
-        'aurelien.raulo@telecom-paris.fr, salimatou.traore@telecom-paris.fr',
+    author_email='alban.pereira@telecom-paris.fr, yuchen.xia@telecom-paris.fr, \
+        aurelien.raulo@telecom-paris.fr, salimatou.traore@telecom-paris.fr',
     packages=find_packages(),
     install_requires=[
         'datetime',
