@@ -82,7 +82,7 @@ Assurer le fichier setup.py est correctement configuré avec les métadonnées d
 
 ### Étape 2 : Configuration et utilisation de GitHub Actions
 
-Utiliser GitHub Actions pour automatiser le processus d'envoi de versions sur PyPI. Chaque fois que vous créez une pull request sur la branche "master", il supprimera d'abord les anciens fichiers de distribution, construira un nouveau package à partir de setup.py et l'enverra sur PyPI en utilisant Twine.
+Utiliser GitHub Actions pour automatiser le processus d'envoi de versions sur PyPI. Chaque fois que vous créez une pull request sur la branche "master" (bien penser à modifier la version dans le fichier setup.py), il supprimera d'abord les anciens fichiers de distribution, construira un nouveau package à partir de setup.py et l'enverra sur PyPI en utilisant Twine.
 
 Pour construire le package, y compris le fichier de distribution source et le fichier de distribution "wheel":
 
